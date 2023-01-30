@@ -5,6 +5,11 @@ const store = createStore({
         return {
             username: 'Jose.Eloy'
         }
+    },
+    getters: {
+        firstName(state){
+            return state.username
+        }
     }
 })
 

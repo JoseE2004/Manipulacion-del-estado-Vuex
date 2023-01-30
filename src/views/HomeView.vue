@@ -30,20 +30,11 @@ export default {
         { id: 6, name: 'Atención a clientes', messages: 120 }
       ]
     }
-  },//Usamos el mapState para crear un alias / uso de vuex
+  },
   computed: {
     ...mapState(['username'])
   },
-  /* de forma manual
-  computed: {
-    foo() {},
-    ...mapState({
-      username: (state) => state.username
-    })
-  }*/
-  /*computed: mapState({
-    username: (state) => state.username
-  }),*/
+
 }
 </script>
 
@@ -53,7 +44,7 @@ export default {
     <InputSearch v-model="search" />
     <ProfileCard
       :avatar="profile.avatar"
-      :username="username"
+      :username="$store.getters.firstName"
       :status="profile.status"
     />
     <RouterLink to="/" class="channels-title">Canales <Icon icon="carbon:hashtag" /></RouterLink>
