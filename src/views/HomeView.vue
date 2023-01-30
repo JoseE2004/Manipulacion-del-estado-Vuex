@@ -44,7 +44,7 @@ export default {
     <InputSearch v-model="search" />
     <ProfileCard
       :avatar="profile.avatar"
-      :username="$store.getters.firstName"
+      :username="$store.getters.firstName('-')"
       :status="profile.status"
     />
     <RouterLink to="/" class="channels-title">Canales <Icon icon="carbon:hashtag" /></RouterLink>
