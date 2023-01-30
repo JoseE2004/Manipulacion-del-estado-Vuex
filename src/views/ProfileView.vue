@@ -1,23 +1,29 @@
 <script>
-import store from '@/store/store.js'
+import { mapState, mapActions } from 'vuex'
 export default {
-  data(){
-    return{
-      store
-    }
+  computed: {
+    ...mapState({
+      username: (state) => state.username
+    })
+  },
+  methods: {
+    ...mapActions(['updateUsername'])
   }
 }
-
 </script>
-
 
 <template>
   <div class="profile">
     <div class="box">
       <img src="/avatars/avatar.jpg" alt="avatar" />
       <label for="username">Nombre de usuario</label>
-      <input type="text" placeholder="Name User" :value="store.username" @input="store.updateUsername($event.target.value) "/>
-      <button>Acceder</button>
+      <input
+        type="text"
+        placeholder="Jane Smith"
+        :value="username"
+        @input="updateUsername($event.target.value)"
+      />
+      <button @click="$router.push('/')">Acceder</button>
     </div>
   </div>
 </template>
