@@ -8,7 +8,7 @@ const store = createStore({
     },
     getters: {
         firstName(state){
-            return state.username.split('.')
+            return state.username.split('.')[0]
         }
     }
 })
