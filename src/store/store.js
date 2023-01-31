@@ -1,10 +1,10 @@
-import { reactive } from "vue"
+import { reactive } from 'vue'
 
 const store = reactive({
-    usernme: 'jose.nerd',
-    updateUsername(username){
-        this.username = username
-    }
+  username: 'diana.nerd',
+  updateUsername(username) {
+    this.username = username
+  }
 })
 
 export default store
