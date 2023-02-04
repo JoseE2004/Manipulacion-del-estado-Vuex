@@ -33,7 +33,7 @@ export default {
   computed: {
     ...mapState(['status']),
     ...mapGetters('profile', ['firstName']),
-    ...mapGetters('channels', ['getChannels']),
+    ...mapGetters('channels', ['getChannels'])
   },
 }
 </script>
@@ -54,7 +54,7 @@ export default {
         :key="channel.id"
         :id="channel.id"
         :name="channel.name"
-        :messages="channel.messages.length"
+        :messages="channel.messages"
       />
     </div>
   </aside>

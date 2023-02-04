@@ -5,7 +5,13 @@ const module = {
   namespaced: true,
   state() {
     return {
-      username: ''
+      id: 1,
+      username: '',
+      details: {
+        id: 1,
+        name: 'Jose',
+        avatar: '/avatars/avatar.jpg'
+      }
     }
   },
   getters: {
@@ -28,7 +34,6 @@ const module = {
         commit(COMMIT_SET_STATUS, 'active', { root: true })
         console.log('status', rootState.status)
       }
-      
     }
   },
 }
